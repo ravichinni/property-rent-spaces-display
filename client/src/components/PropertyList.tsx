@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Property } from '../types';
 import PropertyCard from './PropertyCard';
+import config from '../config';
 
 const PropertyList: React.FC = () => {
     const [properties, setProperties] = useState<Property[]>([]);
@@ -10,7 +11,7 @@ const PropertyList: React.FC = () => {
     useEffect(() => {
         const fetchProperties = async () => {
             try {
-                const response = await fetch('https://localhost:5000/api/properties');
+                const response = await fetch(`${config.apiUrl}/api/Properties`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch properties');
                 }

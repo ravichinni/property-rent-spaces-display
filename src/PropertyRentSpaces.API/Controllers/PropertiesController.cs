@@ -6,6 +6,9 @@ using PropertyRentSpaces.Infrastructure.Services;
 
 namespace PropertyRentSpaces.API.Controllers
 {
+    /// <summary>
+    /// Controller for managing property and space rental information
+    /// </summary>
     [ApiController]
     [Route("api/[controller]")]
     public class PropertiesController : ControllerBase
@@ -17,7 +20,15 @@ namespace PropertyRentSpaces.API.Controllers
             _blobStorageService = blobStorageService;
         }
 
+        /// <summary>
+        /// Retrieves all properties and their associated spaces
+        /// </summary>
+        /// <returns>A list of properties with their details</returns>
+        /// <response code="200">Returns the list of properties</response>
+        /// <response code="500">If there was an error retrieving the properties</response>
         [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<Property>), 200)]
+        [ProducesResponseType(500)]
         public async Task<ActionResult<IEnumerable<Property>>> GetProperties()
         {
             try

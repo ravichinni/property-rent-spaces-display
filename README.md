@@ -41,6 +41,9 @@ AZURE_SAS_TOKEN=?sp=r&st=2024-10-28T10:35:48Z&se=2025-10-28T18:35:48Z&spr=https&
 # Navigate to the solution directory
 cd src
 
+# Navigate to the solution directory
+cd PropertyRentSpaces.API
+
 # Restore NuGet packages
 dotnet restore
 
@@ -56,8 +59,8 @@ dotnet run
 ```
 
 The API will be available at:
-- API: http://localhost:5000
-- Swagger UI: http://localhost:5000/swagger
+- API: http://localhost:5000/api/Properties
+- Swagger UI: http://localhost:5000/swagger/index.html
 
 ### 4. Frontend Setup
 

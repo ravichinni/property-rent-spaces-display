@@ -25,9 +25,9 @@ namespace PropertyRentSpaces.Infrastructure.Services
 
         public AzureBlobStorageService(IConfiguration configuration, IMemoryCache cache)
         {
-            _blobUrl = configuration["AzureBlobStorage:Url"] 
+            _blobUrl = configuration["AZURE_BLOB_URL"] 
                 ?? throw new ArgumentNullException(nameof(configuration), "Azure Blob URL is not configured");
-            _sasToken = configuration["AzureBlobStorage:SasToken"] 
+            _sasToken = configuration["AZURE_BLOB_SAS_TOKEN"] 
                 ?? throw new ArgumentNullException(nameof(configuration), "Azure SAS Token is not configured");
             _cache = cache ?? throw new ArgumentNullException(nameof(cache));
         }
