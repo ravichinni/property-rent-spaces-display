@@ -55,7 +55,7 @@ dotnet run
 
 The API will be available at:
 - API: http://localhost:5000/api/Properties
-- Swagger UI: http://localhost:5000/swagger/index.html
+<!-- - Swagger UI: http://localhost:5000/swagger/index.html -->
 
 ### 4. Frontend Setup
 
