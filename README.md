@@ -19,39 +19,77 @@ This project is a web application that displays property and space rental inform
 - Docker and Docker Compose
 - Azure Blob Storage account with SAS token
 
-## Getting Started
+## Local Development Setup
 
-1. Clone the repository
-2. Set up environment variables:
-   - Create `.env` file in the root directory
-   - Add the following variables:
-     ```
-     AZURE_BLOB_URL=https://nmrkpidev.blob.core.windows.net/dev-test/dev-test.json
-     AZURE_SAS_TOKEN=your_sas_token
-     ```
-
-3. Run with Docker Compose:
-   ```bash
-   docker-compose up --build
-   ```
-
-4. Access the applications:
-   - API: http://localhost:5000
-   - Frontend: http://localhost:3000
-
-## Development
-
-### Backend Development
+### 1. Clone the Repository
 ```bash
-cd src/PropertyRentSpaces.API
+git clone <repository-url>
+cd property-rent-spaces-display
+```
+
+### 2. Environment Setup
+
+Create a `.env` file in the root directory with the following content:
+```
+AZURE_BLOB_URL=https://nmrkpidev.blob.core.windows.net/dev-test/dev-test.json
+AZURE_SAS_TOKEN=?sp=r&st=2024-10-28T10:35:48Z&se=2025-10-28T18:35:48Z&spr=https&sv=2022-11-02&sr=b&sig=bdeoPWtefikVgUGFCUs4ihsl22ZhQGu4%2B4cAfoMwd4k%3D
+```
+
+### 3. Backend Setup
+
+```bash
+# Navigate to the solution directory
+cd src
+
+# Restore NuGet packages
+dotnet restore
+
+# Build the solution
+dotnet build
+
+# Run the tests
+dotnet test
+
+# Run the API (optional, if not using Docker)
+cd PropertyRentSpaces.API
 dotnet run
 ```
 
-### Frontend Development
+The API will be available at:
+- API: http://localhost:5000
+- Swagger UI: http://localhost:5000/swagger
+
+### 4. Frontend Setup
+
 ```bash
+# Navigate to the client directory
 cd client
+
+# Install dependencies
 npm install
+
+# Run the development server (optional, if not using Docker)
 npm start
+```
+
+The frontend will be available at:
+- http://localhost:3000
+
+### 5. Running with Docker
+
+```bash
+# Build and start the containers
+docker-compose up --build
+```
+
+This will start both the API and frontend services. The application will be available at:
+- Frontend: http://localhost:3000
+- API: http://localhost:5000
+- Swagger UI: http://localhost:5000/swagger
+
+To stop the containers:
+```bash
+docker-compose down
 ```
 
 ## Testing
@@ -114,6 +152,27 @@ Frontend:
 cd client
 npm test -- --coverage
 ```
+
+## Troubleshooting
+
+### Common Issues
+
+1. Port Conflicts
+   - If port 3000 or 5000 is already in use, you can modify the ports in `docker-compose.yml`
+   - For local development, you can change the ports in the respective project configurations
+
+2. Docker Issues
+   - Ensure Docker Desktop is running
+   - Try rebuilding the containers: `docker-compose up --build --force-recreate`
+
+3. API Connection Issues
+   - Verify the Azure Blob Storage URL and SAS token in the `.env` file
+   - Check if the API is running and accessible
+   - Ensure CORS is properly configured
+
+4. Frontend Build Issues
+   - Clear node_modules and reinstall: `rm -rf node_modules && npm install`
+   - Clear npm cache: `npm cache clean --force`
 
 ## Architecture
 

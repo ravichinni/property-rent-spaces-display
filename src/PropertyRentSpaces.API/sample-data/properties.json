@@ -1,0 +1,152 @@
+[
+  {
+    "id": "prop-001",
+    "name": "Downtown Business Center",
+    "description": "Modern office building in the heart of downtown with state-of-the-art facilities and amenities.",
+    "features": [
+      "24/7 Security",
+      "Fitness Center",
+      "Conference Rooms",
+      "High-Speed Internet",
+      "Underground Parking",
+      "Bike Storage",
+      "Electric Vehicle Charging"
+    ],
+    "highlights": [
+      "LEED Gold Certified",
+      "Downtown Location",
+      "Public Transportation Hub",
+      "Modern Architecture",
+      "Energy Efficient"
+    ],
+    "transportation": [
+      {
+        "name": "Green Line Metro",
+        "distance": "0.2 miles"
+      },
+      {
+        "name": "Bus Route 15",
+        "distance": "0.1 miles"
+      },
+      {
+        "name": "Bike Share Station",
+        "distance": "0.3 miles"
+      }
+    ],
+    "spaces": [
+      {
+        "id": "space-001",
+        "name": "Suite 100",
+        "description": "Corner office suite with natural light and city views",
+        "rentRoll": [
+          {
+            "month": "January",
+            "amount": 2500.00
+          },
+          {
+            "month": "February",
+            "amount": 2500.00
+          },
+          {
+            "month": "March",
+            "amount": 2500.00
+          }
+        ]
+      },
+      {
+        "id": "space-002",
+        "name": "Suite 200",
+        "description": "Large open office space with modern amenities",
+        "rentRoll": [
+          {
+            "month": "January",
+            "amount": 3500.00
+          },
+          {
+            "month": "February",
+            "amount": 3500.00
+          },
+          {
+            "month": "March",
+            "amount": 3500.00
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prop-002",
+    "name": "Tech Park Plaza",
+    "description": "Contemporary office complex in the technology district, perfect for tech companies and startups.",
+    "features": [
+      "Fiber Optic Internet",
+      "Co-working Spaces",
+      "Rooftop Garden",
+      "Cafeteria",
+      "Meeting Pods",
+      "Secure Access",
+      "Cloud Infrastructure"
+    ],
+    "highlights": [
+      "Tech Hub Location",
+      "Innovation Center",
+      "Green Building",
+      "Smart Building Technology",
+      "Community Events"
+    ],
+    "transportation": [
+      {
+        "name": "Blue Line Metro",
+        "distance": "0.4 miles"
+      },
+      {
+        "name": "Tech Shuttle",
+        "distance": "0.2 miles"
+      },
+      {
+        "name": "Bike Path",
+        "distance": "0.1 miles"
+      }
+    ],
+    "spaces": [
+      {
+        "id": "space-003",
+        "name": "Innovation Lab",
+        "description": "Flexible space with high-tech equipment and collaboration areas",
+        "rentRoll": [
+          {
+            "month": "January",
+            "amount": 5000.00
+          },
+          {
+            "month": "February",
+            "amount": 5000.00
+          },
+          {
+            "month": "March",
+            "amount": 5000.00
+          }
+        ]
+      },
+      {
+        "id": "space-004",
+        "name": "Startup Suite",
+        "description": "Modern office space designed for growing companies",
+        "rentRoll": [
+          {
+            "month": "January",
+            "amount": 3000.00
+          },
+          {
+            "month": "February",
+            "amount": 3000.00
+          },
+          {
+            "month": "March",
+            "amount": 3000.00
+          }
+        ]
+      }
+    ]
+  }
+] 
