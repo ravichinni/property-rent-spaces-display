@@ -1,6 +1,13 @@
 using PropertyRentSpaces.Infrastructure.Services;
+using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Load .env file from the API project directory
+Env.Load();
+
+// Add environment variables configuration
+builder.Configuration.AddEnvironmentVariables();
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -32,7 +39,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
 app.UseCors("AllowReactApp");
 app.UseAuthorization();
 app.MapControllers();
