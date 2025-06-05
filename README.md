@@ -57,15 +57,62 @@ npm start
 ## Testing
 
 ### Backend Tests
+The backend uses xUnit for testing and includes tests for:
+- Azure Blob Storage Service
+- API Controllers
+- Data Models
+
+To run backend tests:
 ```bash
 cd src/PropertyRentSpaces.Tests
 dotnet test
 ```
 
+Key test files:
+- `AzureBlobStorageServiceTests.cs`: Tests for blob storage integration
+  - Constructor validation
+  - Configuration requirements
+  - Error handling
+  - Cache functionality
+
 ### Frontend Tests
+The frontend uses Jest and React Testing Library for testing and includes tests for:
+- PropertyList component
+- PropertyCard component
+- Data fetching and error handling
+
+To run frontend tests:
 ```bash
 cd client
 npm test
+```
+
+Key test files:
+- `PropertyList.test.tsx`: Tests for the main property list component
+  - Loading states
+  - Data fetching
+  - Error handling
+  - API response handling
+
+- `PropertyCard.test.tsx`: Tests for individual property cards
+  - Rendering of property details
+  - Expand/collapse functionality
+  - UI state changes
+  - Component interaction
+
+### Test Coverage
+To generate test coverage reports:
+
+Backend:
+```bash
+cd src/PropertyRentSpaces.Tests
+dotnet test --collect:"XPlat Code Coverage"
+```
+
+Frontend:
+```bash
+cd client
+npm test -- --coverage
 ```
 
 ## Architecture
