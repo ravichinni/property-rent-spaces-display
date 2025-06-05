@@ -73,6 +73,9 @@ npm start
 The frontend will be available at:
 - http://localhost:3000
 
+### Application Screenshot
+![Property Rent Spaces Application](Media/app-screenshot.png)
+
 ### 5. Running with Docker (Not Tested)
 
 ```bash
