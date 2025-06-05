@@ -57,6 +57,9 @@ The API will be available at:
 - API: http://localhost:5000/api/Properties
 <!-- - Swagger UI: http://localhost:5000/swagger/index.html -->
 
+### API Screenshot
+![Property Rent Spaces API](./media/api-screenshot.png)
+
 ### 4. Frontend Setup
 
 ```bash
@@ -74,7 +77,7 @@ The frontend will be available at:
 - http://localhost:3000
 
 ### Application Screenshot
-![Property Rent Spaces Application](Media/app-screenshot.png)
+![Property Rent Spaces Application](./media/app-screenshot.png)
 
 ### 5. Running with Docker (Not Tested)
 
