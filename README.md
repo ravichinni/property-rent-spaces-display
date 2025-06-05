@@ -50,11 +50,6 @@ dotnet restore
 # Build the solution
 dotnet build
 
-# Run the tests
-dotnet test
-
-# Run the API (optional, if not using Docker)
-cd PropertyRentSpaces.API
 dotnet run
 ```
 
