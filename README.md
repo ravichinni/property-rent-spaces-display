@@ -19,7 +19,7 @@ This project is a web application that displays property and space rental inform
 - Docker and Docker Compose
 - Azure Blob Storage account with SAS token
 
-## Local Development Setup
+## Local Development Setup (On Windows)
 
 ### 1. Clone the Repository
 ```bash
@@ -31,8 +31,8 @@ cd property-rent-spaces-display
 
 Create a `.env` file in the root directory with the following content:
 ```
-AZURE_BLOB_URL=https://nmrkpidev.blob.core.windows.net/dev-test/dev-test.json
-AZURE_SAS_TOKEN=?sp=r&st=2024-10-28T10:35:48Z&se=2025-10-28T18:35:48Z&spr=https&sv=2022-11-02&sr=b&sig=bdeoPWtefikVgUGFCUs4ihsl22ZhQGu4%2B4cAfoMwd4k%3D
+AZURE_BLOB_URL=https://*********.blob.core.windows.net/dev-test/dev-test.json
+AZURE_SAS_TOKEN=?sp=r&st=2024-10-28T10:35:48Z&se=2025-10-28T18:35:48Z&spr=https&sv=2022-11-02&sr=b&sig=******************
 ```
 
 ### 3. Backend Setup
@@ -73,7 +73,7 @@ npm start
 The frontend will be available at:
 - http://localhost:3000
 
-### 5. Running with Docker
+### 5. Running with Docker (Not Tested)
 
 ```bash
 # Build and start the containers
