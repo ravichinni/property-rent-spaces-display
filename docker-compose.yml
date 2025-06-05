@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ./src
+      dockerfile: PropertyRentSpaces.API/Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - AzureBlobStorage__Url=https://nmrkpidev.blob.core.windows.net/dev-test/dev-test.json
+      - AzureBlobStorage__SasToken=?sp=r&st=2024-10-28T10:35:48Z&se=2025-10-28T18:35:48Z&spr=https&sv=2022-11-02&sr=b&sig=bdeoPWtefikVgUGFCUs4ihsl22ZhQGu4%2B4cAfoMwd4k%3D
+    ports:
+      - "5000:80"
+    networks:
+      - app-network
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - api
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge 
